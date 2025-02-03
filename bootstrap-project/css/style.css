@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Urbanist", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.my-btn {
+    padding: 0.75rem 1.125rem; /* 12px 18px */
+    background-color: #A8FF35;
+    color: #333333;
+    border-radius: 1.875rem; /* 30px */
+}
+
+.my-btn-outline {
+    padding: 0.75rem 1.125rem; /* 12px 18px */
+    background-color: transparent;
+    color: #A8FF35;
+    border-radius: 1.875rem; /* 30px */
+    border: 0.0625rem solid #A8FF35; /* 1px */
+}
+
+/* BG banner color */
+main {
+    background: url("../img/banner/bg.svg") no-repeat center;
+    background-size: cover;
+}
+
+/* banner */
+.banner {
+    padding: 6.25rem 0; /* 100px 0px */
+}
+
+.banner h1 {
+    font-size: 2.8125rem; /* 45px */
+    font-weight: 500;
+    background: -webkit-linear-gradient(0deg, #ffffff, #333333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.banner p {
+    color: #ffffff;
+}
+
+/* subscriber */
+.subscriber {
+    padding: 6.25rem 0; /* 100px 0px */
+}
+
+.subscriber .my-btn {
+    display: inline-block;
+}
+
+.subscriber-box {
+    padding: 3.125rem 0; /* 50px 0px */
+    position: relative;
+}
+
+.subscriber-box h2 {
+    font-size: 3.125rem; /* 50px */
+    font-weight: 400;
+}
+
+.line {
+    position: absolute;
+    top: 4.0625rem; /* 65px */
+    right: -25%;
+}
+
+/* partner */
+.partner {
+    padding: 6.25rem 0; /* 100px 0px */
+}
+
+.partner h2 {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 500;
+    line-height: 3.75rem; /* 60px */
+}
+
+.partner-mb {
+    margin-bottom: 4.375rem; /* 70px */
+}
+
+.partner-box {
+    padding: 4.375rem 3.125rem; /* 70px 50px */
+    background-color: #FAFAFA;
+    border: 0.0625rem solid #FAFAFA; /* 1px */
+    transition: all 0.3s;
+}
+
+.partner-box p {
+    line-height: 1.5625rem; /* 25px */
+}
+
+.partner-box:hover {
+    background-color: #A8FF35;
+    border: 0.0625rem solid #333333; /* 1px */
+}
+
+/* brand */
+.brand {
+    padding: 6.25rem 0; /* 100px 0px */
+    border-top: 0.0625rem solid #d0d0d0; /* 1px */
+    border-bottom: 0.0625rem solid #d0d0d0; /* 1px */
+}
+
+/* footer */
+footer {
+    padding: 6.25rem 0; /* 100px 0px */
+    color: #ffffff;
+    background: url("../img/footer/bg.png") no-repeat center;
+    background-size: cover;
+}
+
+footer h2 {
+    font-size: 6.25rem; /* 100px */
+    position: relative;
+}
+
+footer h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+    height: 0.125rem; /* 2px */
+    background-color: #ffffff;
+}
+
+footer h5 {
+    margin-bottom: 1.875rem; /* 30px */
+}
+
+footer p {
+    margin-bottom: 3.125rem; /* 50px */
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem; /* 10px */
+}
+
+.social-icon i {
+    width: 1.875rem; /* 30px */
+    height: 1.875rem; /* 30px */
+    text-align: center;
+    line-height: 1.875rem; /* 30px */
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 1.25rem; /* 20px */
+}
+
+footer a {
+    color: #ffffff;
+}
+
+footer ul li i {
+    color: #ffffff;
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 800px) {
+    .subscriber h2 {
+        font-size: 5rem; /* 80px */
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .banner {
+        padding: 11.5625rem 0; /* 185px 0px */
+    }
+
+    .banner h1 {
+        font-size: 4rem; /* 64px */
+    }
+
+    .subscriber h2 {
+        font-size: 8rem; /* 128px */
+    }
+
+    .partner h2 {
+        font-size: 2.5rem; /* 40px */
+    }
+
+    footer h2 {
+        font-size: 6.25rem; /* 100px */
+    }
+}
+
+@media only screen and (max-width: 998px) {
+    .line {
+        display: none;
+    }
+}
