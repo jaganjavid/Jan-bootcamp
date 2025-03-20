@@ -103,6 +103,10 @@ button:disabled{
   margin-top: 20px;
 }
 
+.stats{
+  margin-bottom: 20px
+}
+
 footer{
   padding: 10px;
   background-color: lightgray;
