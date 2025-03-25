@@ -1,33 +1,33 @@
 
+
+import { useState } from "react"
+
+
+import Header from "./components/Header"
 import FeedbackList from "./components/FeedbackList";
-import Header from "./components/Header";
+import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
-import { Routes, Route } from "react-router-dom";
-import About from "./components/About";
+
+
+
+
 
 
 const App = () => {
- 
-  return (
-    <>
-      <Header/>
-      <div className="container">
-        
-        <Routes>
-          <Route path="/" element={
-            <>
-            <FeedbackForm/>
-            <FeedbackList/>
-            </>
-          }/>
 
-          <Route path="/about" element={<About/>}/>
-         
-        </Routes>
-       
+  return (
+    <div>
+      <Header/>
+      
+      <div className="container">
+         <FeedbackForm/>
+         <FeedbackStats/>
+         <FeedbackList/>         
       </div>
-    </>
-  );
+    </div>
+  )
 }
 
-export default App;
+export default App
+
+

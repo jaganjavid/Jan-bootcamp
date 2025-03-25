@@ -1,23 +1,22 @@
-import { useContext } from "react";
-import FeedbackItem from "./FeedbackItem";
-import FeedbackContext from "../context/FeedbackContext";
+import React, { useContext } from 'react'
+import FeedbackItem from './FeedbackItem'
+import FeedbackContext from '../context/FeedbackContext'
 
 
 
+const FeedbackList = () => {
 
-const FeedbackList = ({ handleDelete }) => {
+
+  const {feedback} = useContext(FeedbackContext);
 
 
-  const { feedBack, isLoading } = useContext(FeedbackContext);
+  if(feedback.length === 0) return <h3>There is no items</h3>
 
-  if(isLoading) return <h3>Loading...</h3>
 
-  if(feedBack.length === 0)return <h3>There is no item added yet</h3>
-
-    
+  
   return (
-    feedBack.map((item) => (
-        <FeedbackItem key={item.id} item={item} handleDelete={handleDelete}/>
+    feedback.map(item => (
+      <FeedbackItem key={item.id} item={item}/>
     ))
   )
 }
