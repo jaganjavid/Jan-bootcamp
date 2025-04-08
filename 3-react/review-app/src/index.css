@@ -23,6 +23,12 @@ body{
   padding: 0px 20px;
 }
 
+.d-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 main{
   min-height: 85vh;
 }
@@ -78,12 +84,17 @@ input:focus{
   outline: none;
 }
 
+.about p {
+  margin: 20px 0px;
+}
+
 .btn{
   padding: 10px 20px;
   border: none;
   border: 1px solid transparent;
   border-radius: 8px;
   color: #ffffff;
+  display: inline-block;
 }
 
 .btn-primary{

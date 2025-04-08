@@ -1,12 +1,14 @@
 
 
-import { useState } from "react"
-
-
 import Header from "./components/Header"
 import FeedbackList from "./components/FeedbackList";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
+
+import { Routes, Route } from "react-router-dom";
+import About from "./components/About";
+
+
 
 
 
@@ -20,9 +22,18 @@ const App = () => {
       <Header/>
       
       <div className="container">
-         <FeedbackForm/>
-         <FeedbackStats/>
-         <FeedbackList/>         
+
+        <Routes>
+          <Route path="/" element={
+            <>
+            <FeedbackForm/>
+            <FeedbackStats/>
+            <FeedbackList/>  
+            </>
+          }/>
+          <Route path="/about" element={<About/>}/>
+        </Routes>
+             
       </div>
     </div>
   )
