@@ -15,4 +15,10 @@ userSchema.pre("save", async function(next){
 
 })
 
+userSchema.methods.matchPassword = function(password){
+
+    return bcrypt.compare(password, this.password)
+
+}
+
 export default mongoose.model("User", userSchema);
